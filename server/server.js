@@ -36,7 +36,6 @@ app.get('/todos/:id', (req, res) => {
   var id = req.params.id;
 
   if (!ObjectId.isValid(id)) {
-    console.log('ID not valid');
     return res.status(404).send();
   }
 
